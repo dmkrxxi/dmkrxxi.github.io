@@ -50,35 +50,35 @@
       
       <label>
         ФИО:<br>
-        <input name="field-name-1" placeholder="Введите ваши ФИО">
+        <input name="field-name-1" placeholder="Введите ваши ФИО" required>
       </label><br>
 
       <label>
         Номер телефона:<br>
-        <input name="tel" placeholder="+7">
+        <input name="tel" placeholder="+7" required>
       </label><br>
 
       <label>
         E-mail:<br>
-        <input name="email" placeholder="example@gmail.com">
+        <input name="email" placeholder="example@gmail.com" required>
       </label><br>
 
       <label>
         Дата рождения:<br>
-        <input name="field-date" type="date">
+        <input name="field-date" type="date" required>
       </label><br>
 
       Пол:<br>
       <label>
-        <input type="radio" checked="checked" name="radio-group-1" value="m">Мужской
+        <input type="radio" checked="checked" name="radio-gender" value="male" required>Мужской
       </label>
       <label>
-        <input type="radio" name="radio-group-1" value="f">Женский
+        <input type="radio" name="radio-gender" value="female" required>Женский
       </label><br>
 
       <label>
         Любимый язык программирования:<br>
-        <select name="field-name-2[]" multiple="multiple">
+        <select name="field-name-2[]" multiple="multiple" required>
           <option value="item1">Pascal</option>
           <option value="item2">C</option>
           <option value="item3">C++</option>
@@ -95,12 +95,12 @@
 
       <label>
         Биография:<br>
-        <textarea name="field-name-3" placeholder="Расскажите о себе">
+        <textarea name="field-name-3" placeholder="Расскажите о себе" required>
         </textarea>
       </label><br>
 
       <label>
-        <input type="checkbox" checked="checked" name="check-1">С контрактом ознакомлен(а)
+        <input type="checkbox" checked="checked" name="check-1" required>С контрактом ознакомлен(а)
       </label><br>
 
       <input type="submit" value="Сохранить">
