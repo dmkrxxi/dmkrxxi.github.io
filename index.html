@@ -24,18 +24,20 @@
       <li><a href="">Контекстная ссылка</a> в тексте абзаца</li>
       <li><a href="https://www.kubsu.ru/index.php#section-content">Ссылка на фрагмент страницы стороннего сайта</a></li>
       <li><p>Ссылки из прямоугольных и круглых областей картинки</p>
-        <img src = "https://dmkrxxi.github.io/Mountain.jpg" usemap="#imagemap1">
+        <img src = "https://dmkrxxi.github.io/Mountain.jpg" alt="Прямоугольная область" usemap="#imagemap1">
           <map name="imagemap1">
-            <area shape="rect" coords="64,64,192,192" href="https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D1%80%D1%8B">
-        <img src = "https://dmkrxxi.github.io/Mountain.jpg" usemap="#imagemap2">
+            <area shape="rect" coords="64,64,192,192" href="https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D1%80%D1%8B" alt="Горы">
+          </map>
+            <img src = "https://dmkrxxi.github.io/Mountain.jpg" alt="Круглая область" usemap="#imagemap2">
           <map name="imagemap2">
-            <area shape="circle" coords="128,128,64" href="https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D1%80%D1%8B">
-      </li>
+            <area shape="circle" coords="128,128,64" href="https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D1%80%D1%8B"alt="Горы">
+          </map>
+        </li>
       <li><a href="">Ссылка с пустым href</a></li>
       <li><a>Ссылка без href</a></li>
       <li><a href="https://www.ozon.ru/" rel="nofollow">Ссылка, по которой запрещён переход поисковикам</a></li>
       <li><a href="https://www.ozon.ru/">Ссылка, запрещённая для индексации поисковиками</a></li>
-      <li><p></p>Нумерованный список ссылок с подписями title</p>
+      <li><p>Нумерованный список ссылок с подписями title</p>
             <ol>
               <li><a href="https://www.kubsu.ru/index.php" title="Подпись первой ссылки">Первая ссылка</a></li>
               <li><a href="https://www.kubsu.ru/ru/university/departments" title="Подпись второй ссылки">Вторая ссылка</a></li>
@@ -47,44 +49,38 @@
 
             
     <h2 id="fragment">Форма</h2>
-    <form action="" method ="POST">
+    <form action="/form-submitted.html" method ="POST">
       
       <label>
-        ФИО:<br />
-        <input name="field-name-1"
-          placeholder="Введите ваши ФИО" />
-      </label><br />
+        ФИО:<br>
+        <input name="field-name-1" placeholder="Введите ваши ФИО">
+      </label><br>
 
       <label>
-        Номер телефона:<br />
-        <input name="tel"
-          placeholder="+7" />
-      </label><br />
+        Номер телефона:<br>
+        <input name="tel" placeholder="+7">
+      </label><br>
 
       <label>
-        E-mail:<br />
-        <input name="email"
-          placeholder="example@gmail.com" />
-      </label><br />
+        E-mail:<br>
+        <input name="email" placeholder="example@gmail.com">
+      </label><br>
 
       <label>
-        Дата рождения:<br />
-        <input name="field-date"
-          type="date">
-      </label><br />
+        Дата рождения:<br>
+        <input name="field-date" type="date">
+      </label><br>
 
-      Пол:<br />
+      Пол:<br>
       <label>
-        <input type="radio" checked="checked" name="radio-group-1" value="m" />
-        Мужской
+        <input type="radio" checked="checked" name="radio-group-1" value="m">Мужской
       </label>
       <label>
-        <input type="radio" name="radio-group-1" value="f" />
-        Женский
-      </label><br />
+        <input type="radio" name="radio-group-1" value="f" />Женский
+      </label><br/>
 
       <label>
-        Любимый язык программирования:<br />
+        Любимый язык программирования:<br>
         <select name="field-name-2[]" multiple="multiple">
           <option value="item1">Pascal</option>
           <option value="item2">C</option>
@@ -97,20 +93,18 @@
           <option value="item9">Clojure</option>
           <option value="item10">Prolog</option>
           <option value="item11">Scala</option>
-        </select><br />
+        </select><br>
       </label>
 
       <label>
-        Биография:<br />
-        <textarea name="field-name-3"
-          placeholder="Расскажите о себе">
+        Биография:<br>
+        <textarea name="field-name-3" placeholder="Расскажите о себе">
         </textarea>
-      </label><br />
+      </label><br>
 
       <label>
-        <input type="checkbox" checked="checked" name="check-1">
-        С контрактом ознакомлен(а)
-        </label><br />
+        <input type="checkbox" checked="checked" name="check-1">С контрактом ознакомлен(а)
+      </label><br>
 
       <input type="submit" value="Сохранить" />
     </form>
