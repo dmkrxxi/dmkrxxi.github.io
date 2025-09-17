@@ -23,12 +23,25 @@
       <li><a href="../../page.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
       <li><a href="">Контекстная ссылка</a> в тексте абзаца</li>
       <li><a href="https://www.kubsu.ru/index.php#section-content">Ссылка на фрагмент страницы стороннего сайта</a></li>
-      <li><a href="">Ссылки из прямоугольных и круглых областей картинки (HTML-тег map)</a></li>
+      <li><p>Ссылки из прямоугольных и круглых областей картинки</p>
+        <img src = "https://dmkrxxi.github.io/Mountain.jpg" usemap="#imagemap1">
+          <map name="imagemap1">
+            <area shape="rect" coords="50,50,150,150" href="https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D1%80%D1%8B">
+        <img src = "https://dmkrxxi.github.io/Mountain.jpg" usemap="#imagemap2">
+          <map name="imagemap2">
+            <area shape="rect" coords="100,100,50" href="https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D1%80%D1%8B">
+      </li>
       <li><a href="">Ссылка с пустым href</a></li>
-      <li><a href="">Ссылка без href</a></li>
-      <li><a href="">Ссылка, по которой запрещён переход поисковикам</a></li>
-      <li><a href="">Ссылка, запрещённая для индексации поисковиками</a></li>
-      <li><a href="">Нумерованный список ссылок с подписями title</a></li>
+      <li><a>Ссылка без href</a></li>
+      <li><a href="https://www.ozon.ru/" rel="nofollow">Ссылка, по которой запрещён переход поисковикам</a></li>
+      <li><a href="https://www.ozon.ru/">Ссылка, запрещённая для индексации поисковиками</a></li>
+      <li><p></p>Нумерованный список ссылок с подписями title</p>
+            <ol>
+              <li><a href="https://www.kubsu.ru/index.php" title="Подпись первой ссылки">Первая ссылка</a></li>
+              <li><a href="https://www.kubsu.ru/ru/university/departments" title="Подпись второй ссылки">Вторая ссылка</a></li>
+              <li><a href="https://www.kubsu.ru/ru/fktipm" title="Подпись третьей ссылки">Третья ссылка</a></li>
+            </ol>
+          </li>
       <li><a href="">Ссылка на файл на сервере FTP с авторизацией</a></li>
     </ul>
 
