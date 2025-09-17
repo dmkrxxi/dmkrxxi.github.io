@@ -10,7 +10,7 @@
       <li><a href="http://kubsu.ru/">Абсолютная ссылка на главную страницу сайта КубГУ</a></li>
       <li><a href="https://kubsu.ru/">Абсолютная ссылка на главную страницу сайта КубГУ в протоколе https</a></li>
       <li><a href="https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D1%80%D1%8B">
-        <img="https://dmkrxxi.github.io/Mountain.jpg" alt="Ссылка-изображение" width="256">
+        <img="https://dmkrxxi.github.io/Mountain.jpg" width="256" height = "256" alt="Ссылка-изображение">
       </a></li>
       <li><a href="/page.html">Сокращённая ссылка на внутреннюю страницу</a></li>
       <li><a href="/">Сокращённая ссылка на главную страницу</a></li>
@@ -42,10 +42,78 @@
               <li><a href="https://www.kubsu.ru/ru/fktipm" title="Подпись третьей ссылки">Третья ссылка</a></li>
             </ol>
           </li>
-      <li><a href="">Ссылка на файл на сервере FTP с авторизацией</a></li>
+      <li><a href="ftp://user:password@example.com/file.txt">Ссылка на файл на FTP с авторизацией</a></li>
     </ul>
 
+            
     <h2 id="fragment">Форма</h2>
-    
+    <form action="" method ="POST">
+      
+      <label>
+        ФИО:<br />
+        <input name="field-name-1"
+          placeholder="Введите ваши ФИО" />
+      </label><br />
+
+      <label>
+        Номер телефона:<br />
+        <input name="tel"
+          placeholder="+7" />
+      </label><br />
+
+      <label>
+        E-mail:<br />
+        <input name="email"
+          placeholder="example@gmail.com" />
+      </label><br />
+
+      <label>
+        Дата рождения:<br />
+        <input name="field-date"
+          type="date"
+          placeholder="dd.mm.yyyy">
+      </label><br />
+
+      Пол:<br />
+      <label>
+        <input type="radio" checked="checked" name="radio-group-1" value="m" />
+        Мужской
+      </label>
+      <label>
+        <input type="radio" checked="checked" name="radio-group-1" value="f" />
+        Женский
+      </label><br />
+
+      <label>
+        Любимый язык программирования:<br />
+        <select name="field-name-2[]" multiple="multiple">
+          <option value="item1">Pascal</option>
+          <option value="item2">C</option>
+          <option value="item3">C++</option>
+          <option value="item4">JavaScript</option>
+          <option value="item5">PHP</option>
+          <option value="item6">Python</option>
+          <option value="item7">Java</option>
+          <option value="item8">Haskel</option>
+          <option value="item9">Clojure</option>
+          <option value="item10">Prolog</option>
+          <option value="item11">Scala</option>
+      </label><br />
+
+      <label>
+        Биография:<br />
+        <textarea name="field-name-3">
+          placeholder="Расскажите о себе"
+        </textarea>
+      </label><br />
+
+      <label>
+        <input type="checkbox" checked="checked" name="check-1">
+        С контрактом ознакомлен(а):
+        </label><br />
+
+      <input type="submit" value="Сохранить" />
+    </form>
+            
   </body>
 </html>
