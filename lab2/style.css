@@ -25,6 +25,11 @@ body {
 table {
   width: 100%;
   text-align: center;
+  border-collapse: collapse;
+}
+
+th, td {
+    text-align: center;
 }
 
 footer {
