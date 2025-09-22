@@ -17,6 +17,11 @@ section {
   align-items: center;
 }
 
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
 h2 {
   text-align: center;
 }
