@@ -17,6 +17,10 @@ section {
   align-items: center;
 }
 
+h1 {
+  margin-bottom: 10px;
+}
+
 h2 {
   text-align: center;
 }
@@ -27,9 +31,8 @@ header {
 }
 
 #logo {
-  float:left;
-  width:100px;
-  height:100px;
+  float: left;
+  height: 100%;
 }
 
 nav {
