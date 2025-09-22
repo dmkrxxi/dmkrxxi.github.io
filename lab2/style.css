@@ -33,7 +33,7 @@ header {
 
 #logo {
   float: left;
-  max-height: 100%;
+  height: 300px;
 }
 
 nav {
