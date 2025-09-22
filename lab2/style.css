@@ -17,10 +17,6 @@ section {
   align-items: center;
 }
 
-h1 {
-  margin-left: 10px;
-}
-
 h2 {
   text-align: center;
 }
@@ -34,6 +30,7 @@ header {
 #logo {
   float: left;
   height: 150px;
+  margin-right: 20px;
 }
 
 nav {
