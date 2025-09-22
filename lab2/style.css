@@ -33,7 +33,17 @@ table {
 }
 
 th, td {
-    text-align: center;
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #e3e3e3;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
 }
 
 footer {
