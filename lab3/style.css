@@ -7,23 +7,26 @@
 }
 
 body {
+  background-color: #e8e3df;
   width: 100%;
   margin: 0 auto;
   font-family: Arial, sans-serif;
   font-size: 14px;
+  color: #433b3f;
   display: flex;
   flex-direction: column;
 }
 
 .container {
   max-width: 960px;
-  padding: 0 auto;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 header {
   width: 100%;
   height: 150px;
-  background: linear-gradient(70deg, #a89da2, #91838a);
+  background: linear-gradient(70deg, #e8e3df, #d4c9c1);
 }
 
 .header-content {
@@ -40,7 +43,7 @@ header {
 /* Для мобильных устройств */
 
 nav {
-  background-color: #91838a;
+  background-color: #d4c9c1;
   padding: 10px 0;
   width: 100%;
 }
@@ -57,7 +60,7 @@ nav {
 
 .menu a {
   text-decoration: none;
-  color: #000;
+  color: #433b3f;
   font-weight: bold;
   display: block;
   padding: 8px 0;
@@ -66,13 +69,21 @@ nav {
 /* Основное содержимое */
 
 main {
-  flex: 1;
+  width: 100%;
   padding: 20px 0;
 }
 
 .content-wrapper {
+  max-width: 960px;
   display: flex;
-  flex-firection: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Поменяем порядок секций */
@@ -81,7 +92,7 @@ main {
   order: 1;
 }
 
-#links {
+#list {
   order: 2;
 }
 
@@ -90,6 +101,7 @@ main {
 }
 
 section {
+  justify-content: center;
   align-items: center;
   margin-bottom: 30px;
 }
@@ -107,7 +119,7 @@ ul, ol {
 }
 
 li {
-  mardin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /* Таблица */
@@ -122,6 +134,7 @@ th, td {
   border: 1px solid #433b3f;
   padding: 10px;
   text-align: center;
+  color: #433b3f;
 }
 
 th {
@@ -129,19 +142,19 @@ th {
 }
 
 tr:nth-child(even) {
-    background-color: #c2babe;
+    background-color: #e8e3df;
 }
 
 tr:nth-child(odd) {
-    background-color: #a89da2;
+    background-color: #d4c9c1;
 }
 
 /* Подвал */
 
 footer {
   width: 100%;
-  background-color: #918389;
-  color: #c2babe;
+  background: linear-gradient(110deg, #e8e3df, #d4c9c1);
+  color: #433b3f;
   text-align: center;
   padding: 20px 0;
 }
@@ -149,6 +162,15 @@ footer {
 /* Для планшетов, ноутбуков */
 
 @media screen and (min-width: 768px) {
+  .menu {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .menu li {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
 
   #table {
     order: 2;
@@ -161,5 +183,5 @@ footer {
   #form {
     order: 3;
   }
-  
+
 }
