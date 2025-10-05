@@ -55,7 +55,7 @@ nav {
 }
 
 .menu li {
-  margin-bottom: 10px;
+  margin: 5px;
 }
 
 .menu a {
@@ -108,18 +108,18 @@ section {
 
 h2, h3 {
   text-align: center;
-  margin-bottom: 15px;
+  margin: 8px;
   font-size: 18px;
   color: #433b3f;
 }
 
 ul, ol {
-  margin-bottom: 20px;
+  margin: 5px;
   padding-left: 20px;
 }
 
 li {
-  margin-bottom: 10px;
+  margin: 5px;
 }
 
 /* Таблица */
@@ -169,7 +169,8 @@ footer {
 
   .menu li {
     margin-bottom: 0;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   #table {
@@ -185,3 +186,4 @@ footer {
   }
 
 }
+
