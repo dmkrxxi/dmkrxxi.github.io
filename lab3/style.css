@@ -11,7 +11,7 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #433b3f;
   display: flex;
   flex-direction: column;
@@ -31,7 +31,6 @@ header {
 
 .header-content {
     display: flex;
-    align-items: center;
 }
 
 #logo {
@@ -44,12 +43,13 @@ header {
 
 nav {
   background-color: #d4c9c1;
-  padding: 10px 0;
+  padding: 20px;
   width: 100%;
 }
 
 .menu {
   display: flex;
+  align-items: center;
   list-style-type: none;
   flex-direction: column;
 }
@@ -172,6 +172,10 @@ footer {
     margin-left: 10px;
     margin-right: 10px;
   }
+  
+  .content-wrapper {
+    align-items: flex-start;
+  }
 
   #table {
     order: 2;
@@ -186,4 +190,5 @@ footer {
   }
 
 }
+
 
