@@ -2,23 +2,33 @@
 <html lang="ru">
 
 <head>
-  <title>Задание 2</title>
+  <title>Задание 3</title>
   <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
   <header>
-    <div class="logo">
-        <img id="logo" src="https://dmkrxxi.github.io/lab2/logo.jpg" alt="Логотип сайта">
+    <div class="container">
+      <div class="header-content">
+        <img id="logo" src="https://dmkrxxi.github.io/lab2/logo.jpg" alt="Логотип сайта" class="logo">
+        <h1>Задание 3</h1>
       </div>
-      <nav>
-          <a href="#">Ссылка 1</a> | <a href="#">Ссылка 2</a> | <a href="#">Ссылка 3</a>
-      </nav>
-      <h1>Задание 2</h1>
+    </div>
     </header>
-    
-    <main>
-      <section>
+
+    <nav>
+      <div class="container">
+        <ul class=""menu">
+        <li><a href="#list">Маркированный список</a></li>
+        <li><a href="#table">Таблица</a></li>
+        <li><a href="#form">Анкета</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="content-wrapper">
+      <section id="list">
       <h2>Маркированный список</h2>
       <ul>
         <li><a href="http://kubsu.ru/">Абсолютная ссылка на главную страницу сайта КубГУ</a></li>
@@ -28,7 +38,7 @@
         </a></li>
         <li><a href="/page.html">Сокращённая ссылка на внутреннюю страницу</a></li>
         <li><a href="/">Сокращённая ссылка на главную страницу</a></li>
-        <li><a href="#fragment">Ссылка на фрагмент текущей страницы</a></li>
+        <li><a href="#form">Ссылка на фрагмент текущей страницы</a></li>
         <li><a href="https://www.ozon.ru/category/smartfony-15502/?brandcertified=t&currency_price=6214.000%3B20000.000&delivery=1">Ссылка с тремя параметрами в URL</a></li>
         <li><a href="http://212.192.134.46/MegaPro/UserEntry?Action=Link_FindDoc&id=64754">Ссылка с параметром id в URL</a></li>
         <li><a href="/page-in-current-catalog.html">Относительная ссылка на страницу в текущем каталоге</a></li>
@@ -59,7 +69,7 @@
       </ul>
       </section>
 
-      <section>
+      <section id="table">
       <h2>Таблица</h2>
       <table>
         <tr>
@@ -101,8 +111,8 @@
       </table>
       </section>
 
-      <section>
-      <h2 id="fragment">Форма</h2>
+      <section id="form">
+      <h2>Форма</h2>
       <form action="/form-submitted.html" method="POST">
       <label>
         ФИО:<br>
@@ -161,10 +171,11 @@
       <input type="submit" value="Сохранить">
       </form>
       </section>
+      </div>
     </main>
 
     <footer>
-          <div>
+          <div class="container">
           <p>(c) Корнилова Диана</p>
         </div>
         </footer>

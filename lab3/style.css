@@ -1,30 +1,34 @@
+/* Общие стили */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   width: 100%;
   margin: 0 auto;
   font-family: Arial, sans-serif;
-  line-height: 1.5;
+  font-size: 14px;
   display: flex;
   flex-direction: column;
 }
 
-main {
+.container {
   max-width: 960px;
-  margin: 0 auto;
-  align-items: center;
-}
-
-section {
-  align-items: center;
-}
-
-h2 {
-  text-align: center;
+  padding: 0 auto;
 }
 
 header {
   width: 100%;
   height: 150px;
-  background-color: #e3e3e3;
+  background: linear-gradient(70deg, #a89da2, #91838a);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
 }
 
 #logo {
@@ -33,11 +37,80 @@ header {
   margin-right: 20px;
 }
 
+/* Для мобильных устройств */
+
 nav {
-  width: 960px;
-  margin: 0 auto;
-  text-align: center;
+  background-color: #91838a;
+  padding: 10px 0;
+  width: 100%;
 }
+
+.menu {
+  display: flex;
+  list-style-type: none;
+  flex-direction: column;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  display: block;
+  padding: 8px 0;
+}
+
+/* Основное содержимое */
+
+main {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-firection: column;
+}
+
+/* Поменяем порядок секций */
+
+#table {
+  order: 1;
+}
+
+#links {
+  order: 2;
+}
+
+#form {
+  order: 3;
+}
+
+section {
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+h2, h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #433b3f;
+}
+
+ul, ol {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+li {
+  mardin-bottom: 10px;
+}
+
+/* Таблица */
 
 table {
   width: 100%;
@@ -46,22 +119,47 @@ table {
 }
 
 th, td {
-  border: 1px solid #000;
+  border: 1px solid #433b3f;
   padding: 10px;
   text-align: center;
 }
 
+th {
+  font-weight: bold;
+}
+
 tr:nth-child(even) {
-    background-color: #fff;
+    background-color: #c2babe;
 }
 
 tr:nth-child(odd) {
-    background-color: #e3e3e3;
+    background-color: #a89da2;
 }
+
+/* Подвал */
 
 footer {
   width: 100%;
-  background-color: #7a7a7a;
-  color: #ffffff;
-  padding: 10px;
+  background-color: #918389;
+  color: #c2babe;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Для планшетов, ноутбуков */
+
+@media screen and (min-width: 768px) {
+
+  #table {
+    order: 2;
+  }
+
+  #list {
+    order: 1;
+  }
+
+  #form {
+    order: 3;
+  }
+  
 }
