@@ -1,22 +1,32 @@
-document.addEventListener('DOMContentLoaded', function() {
+/*jslint browser: true, devel: true, es6: true, this: true*/
+
+document.addEventListener('DOMContentLoaded', function () {
+    'use strict';
+    
     // Получаем элементы DOM
-    const quantityInput = document.getElementById('quantity');
-    const productSelect = document.getElementById('product');
-    const calculateButton = document.getElementById('calculate');
-    const resultDiv = document.getElementById('result');
+    var quantityInput = document.getElementById('quantity');
+    var productSelect = document.getElementById('product');
+    var calculateButton = document.getElementById('calculate');
+    var resultDiv = document.getElementById('result');
+
+    // Функция для форматирования числа с пробелами
+    function formatNumber(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    }
 
     // Функция для проверки корректности ввода
     function validateInput(input) {
         // Регулярное выражение: только цифры (одна или более)
-        const regex = /^\d+$/;
+        var regex = /^\d+$/;
         return regex.test(input);
     }
 
     // Функция для расчета стоимости
     function calculateCost() {
         // Получаем значения из формы
-        const quantity = quantityInput.value.trim();
-        const price = parseInt(productSelect.value);
+        var quantity = quantityInput.value.trim();
+        var price = parseInt(productSelect.value, 10);
+        var quantityNumber, totalCost;
         
         // Проверяем корректность ввода
         if (!validateInput(quantity)) {
@@ -24,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        const quantityNumber = parseInt(quantity);
+        quantityNumber = parseInt(quantity, 10);
         
         // Проверяем, что количество больше 0
         if (quantityNumber <= 0) {
@@ -33,31 +43,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Рассчитываем стоимость
-        const totalCost = quantityNumber * price;
+        totalCost = quantityNumber * price;
         
-        // Показываем результат
-        showResult(`Общая стоимость заказа: <strong>${totalCost} руб.</strong>`, 'alert-success');
+        // Форматируем стоимость с пробелами
+        var formattedCost = formatNumber(totalCost);
+        
+        // Показываем результат (только стоимость)
+        showResult('Общая стоимость заказа: <strong>' + formattedCost + ' руб.</strong>', 'alert-success');
     }
 
     // Функция для отображения результата
     function showResult(message, alertClass) {
         resultDiv.innerHTML = message;
-        resultDiv.className = `alert ${alertClass}`;
+        resultDiv.className = 'alert ' + alertClass;
         resultDiv.style.display = 'block';
     }
 
     // Назначаем обработчик события на кнопку
-    calculateButton.addEventListener('click', function(event) {
+    calculateButton.addEventListener('click', function (event) {
         event.preventDefault();
         calculateCost();
     });
 
     // Дополнительно: обработка нажатия Enter в поле ввода
-    quantityInput.addEventListener('keypress', function(event) {
+    quantityInput.addEventListener('keypress', function (event) {
         if (event.key === 'Enter') {
             calculateCost();
         }
     });
-
-    console.log('Калькулятор инициализирован');
 });
