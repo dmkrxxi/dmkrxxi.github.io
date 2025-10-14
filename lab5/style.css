@@ -1,175 +1,55 @@
-/* Общие стили */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Сохраняем цвета и градиенты из предыдущих заданий */
 body {
-  background-color: #e8e3df;
-  width: 100%;
-  margin: 0 auto;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  color: #433b3f;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    background-color: #e8e3df;
+    font-family: Arial, sans-serif;
+    color: #433b3f;
 }
 
-.container {
-  max-width: 960px;
-  padding: 0 15px;
-  margin: 0 auto;
+.bg-gradient {
+    background: linear-gradient(70deg, #e8e3df, #d4c9c1) !important;
 }
 
-/* Header */
-header {
-  width: 100%;
-  height: 150px;
-  background: linear-gradient(70deg, #e8e3df, #d4c9c1);
+footer.bg-gradient {
+    background: linear-gradient(110deg, #e8e3df, #d4c9c1) !important;
 }
 
-.header-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+.navbar-light {
+    background-color: #d4c9c1 !important;
 }
 
-/* Navigation */
-nav {
-  background-color: #d4c9c1;
-  padding: 20px;
-  width: 100%;
+.navbar-light .navbar-nav .nav-link {
+    color: #433b3f;
+    font-weight: bold;
 }
 
-.menu {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  flex-direction: column;
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #000;
 }
 
-.menu li {
-  margin: 5px;
+.card {
+    border: none;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
 }
 
-.menu a {
-  text-decoration: none;
-  color: #433b3f;
-  font-weight: bold;
-  display: block;
-  padding: 8px 0;
+.card-title {
+    color: #433b3f;
+    font-weight: bold;
 }
 
-/* Main content */
-main {
-  width: 100%;
-  padding: 20px 0;
-  flex-grow: 1;
+.btn-primary {
+    background-color: #d4c9c1;
+    border-color: #d4c9c1;
+    color: #433b3f;
+    font-weight: bold;
 }
 
-.content-wrapper {
-  max-width: 960px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.btn-primary:hover {
+    background-color: #c4b4a9;
+    border-color: #c4b4a9;
+    color: #433b3f;
 }
 
-section {
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-  width: 100%;
-}
-
-/* Footer */
-footer {
-  width: 100%;
-  background: linear-gradient(110deg, #e8e3df, #d4c9c1);
-  color: #433b3f;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: auto;
-}
-
-/* Calculator styles */
-.calculator {
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.calculator label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #433b3f;
-}
-
-.calculator input, 
-.calculator select, 
-.calculator button {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #d4c9c1;
-  border-radius: 4px;
-  font-size: 16px;
-  background-color: #f8f8f8;
-}
-
-.calculator button {
-  background-color: #d4c9c1;
-  color: #433b3f;
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-.calculator button:hover {
-  background-color: #c4b4a9;
-}
-
-.result {
-  margin-top: 20px;
-  padding: 15px;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-.success {
-  background-color: #e8e3df;
-  color: #433b3f;
-  border: 1px solid #d4c9c1;
-}
-
-.error {
-  background-color: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
-}
-
-/* Media queries */
-@media screen and (min-width: 768px) {
-  .menu {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .menu li {
-    margin-bottom: 0;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
+.form-label {
+    color: #433b3f;
+    font-weight: bold;
 }
