@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <html lang="ru">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание 5</title>
+    <title>Задание 5 - Калькулятор стоимости заказа</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
-    
-<body>
-    <header>
-        <div>
-            <div class="header-content">
-                <h1 style="text-align: center; padding: 40px; font-size: 26px; font-weight: 700 !important; color: #433b3f; margin: 0;">Задание 5</h1>
-            </div>
+<body class="d-flex flex-column min-vh-100">
+    <header class="bg-gradient py-4">
+        <div class="container">
+            <h1 class="text-center mb-0">Задание 5</h1>
         </div>
     </header>
 
-    <nav>
-        <div>
-            <ul class="menu">
-                <li><a href="#calculator">Калькулятор</a></li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="navbar-nav">
+                <a class="nav-link" href="#calculator">Калькулятор</a>
+            </div>
         </div>
     </nav>
 
-    <main class="container">
-        <div class="content-wrapper">
-            <section id="calculator">
-                <div class="calculator">
-                    <h2 style="text-align: center; margin: 8px; font-size: 18px; font-weight: 700 !important; color: #433b3f;">Калькулятор стоимости заказа</h2>
-                    
-                    <div class="form-group">
-                        <label for="quantity">Количество товара:</label>
-                        <input type="text" id="quantity" placeholder="Введите количество">
+    <main class="container my-4 flex-grow-1">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <section id="calculator">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h2 class="card-title text-center mb-4">Калькулятор стоимости заказа</h2>
+                            
+                            <div class="mb-3">
+                                <label for="quantity" class="form-label">Количество товара:</label>
+                                <input type="text" class="form-control" id="quantity" placeholder="Введите количество">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="product" class="form-label">Выберите товар:</label>
+                                <select class="form-select" id="product">
+                                    <option value="14990">Смартфон - 14990 руб.</option>
+                                    <option value="29990">Ноутбук - 29990 руб.</option>
+                                    <option value="1799">Наушники - 1799 руб.</option>
+                                    <option value="5699">Планшет - 5699 руб.</option>
+                                </select>
+                            </div>
+
+                            <button id="calculate" class="btn btn-primary w-100">Рассчитать стоимость</button>
+
+                            <div id="result" class="mt-3 alert" style="display: none;"></div>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="product">Выберите товар:</label>
-                        <select id="product">
-                            <option value="14990">Смартфон - 14990 руб.</option>
-                            <option value="29990">Ноутбук - 29990 руб.</option>
-                            <option value="1799">Наушники - 1799 руб.</option>
-                            <option value="5699">Планшет - 5699 руб.</option>
-                        </select>
-                    </div>
-
-                    <button id="calculate">Рассчитать стоимость</button>
-
-                    <div id="result" class="result" style="display: none;"></div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
     </main>
 
-    <footer>
+    <footer class="bg-gradient py-3 mt-auto">
         <div class="container">
-            <p>(c) Корнилова Диана</p>
+            <p class="text-center mb-0">(c) Корнилова Диана</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js" defer></script>
 </body>
 </html>
