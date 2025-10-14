@@ -92,11 +92,14 @@ section {
   margin-bottom: 30px;
 }
 
+/* Исправляем стили заголовков */
 h1 {
   text-align: center;
   padding: 40px;
   font-size: 26px;
   color: #433b3f;
+  font-weight: normal;
+  margin: 0;
 }
 
 h2, h3 {
@@ -104,6 +107,7 @@ h2, h3 {
   margin: 8px;
   font-size: 18px;
   color: #433b3f;
+  font-weight: normal;
 }
 
 ul, ol {
