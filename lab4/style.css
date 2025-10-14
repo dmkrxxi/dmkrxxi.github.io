@@ -1,38 +1,172 @@
-/* Сохраняем основные цвета и стили из задания 3 */
+/* Общие стили */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #e8e3df;
+  width: 100%;
+  margin: 0 auto;
   font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #433b3f;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 960px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(70deg, #e8e3df, #d4c9c1);
+}
+
+.header-content {
+    display: flex;
+}
+
+#logo {
+  float: left;
+  height: 150px;
+  margin-right: 20px;
+}
+
+/* Для мобильных устройств */
+
+nav {
+  background-color: #d4c9c1;
+  padding: 20px;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  flex-direction: column;
+}
+
+.menu li {
+  margin: 5px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #433b3f;
+  font-weight: bold;
+  display: block;
+  padding: 8px 0;
+}
+
+/* Основное содержимое */
+
+main {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.content-wrapper {
+  max-width: 960px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  text-align: center;
+  padding: 40px;
+  font-size: 26px;
   color: #433b3f;
 }
 
-.bg-gradient {
-  background: linear-gradient(70deg, #e8e3df, #d4c9c1) !important;
+h2, h3 {
+  text-align: center;
+  margin: 8px;
+  font-size: 18px;
+  color: #433b3f;
 }
 
-footer.bg-gradient {
-  background: linear-gradient(110deg, #e8e3df, #d4c9c1) !important;
+ul, ol {
+  margin: 5px;
+  padding-left: 20px;
 }
 
-/* Стили для таблицы как в задании 3 */
-.table-bordered th,
-.table-bordered td {
+li, label {
+  margin: 5px;
+}
+
+/* Таблица */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th, td {
   border: 1px solid #433b3f;
   padding: 10px;
+  text-align: center;
+  color: #433b3f;
 }
 
-.table-bordered tr:nth-child(even) {
-  background-color: #e8e3df;
+th {
+  font-weight: bold;
 }
 
-.table-bordered tr:nth-child(odd) {
-  background-color: #d4c9c1;
+tr:nth-child(even) {
+    background-color: #e8e3df;
 }
 
-/* Навигация */
-.nav-link {
-  color: #433b3f !important;
+tr:nth-child(odd) {
+    background-color: #d4c9c1;
 }
 
-.nav-link:hover {
-  color: #000 !important;
+/* Подвал */
+
+footer {
+  width: 100%;
+  background: linear-gradient(110deg, #e8e3df, #d4c9c1);
+  color: #433b3f;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Для планшетов, ноутбуков */
+
+@media screen and (min-width: 768px) {
+  .menu {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .menu li {
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .content-wrapper {
+    align-items: flex-start;
+  }
 }
