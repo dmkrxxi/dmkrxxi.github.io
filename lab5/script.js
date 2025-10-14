@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Проверяем корректность ввода
         if (!validateInput(quantity)) {
-            showResult('Ошибка: введите корректное количество (только цифры)', 'error');
+            showResult('Ошибка: введите корректное количество (только цифры)', 'alert-danger');
             return;
         }
         
@@ -28,28 +28,21 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Проверяем, что количество больше 0
         if (quantityNumber <= 0) {
-            showResult('Ошибка: количество должно быть больше 0', 'error');
+            showResult('Ошибка: количество должно быть больше 0', 'alert-danger');
             return;
         }
         
         // Рассчитываем стоимость
         const totalCost = quantityNumber * price;
         
-        // Получаем название выбранного товара
-        const selectedOption = productSelect.options[productSelect.selectedIndex];
-        const productName = selectedOption.text.split(' - ')[0];
-        
         // Показываем результат
-        showResult(`Стоимость заказа: ${totalCost} руб.<br>
-                   Товар: ${productName}<br>
-                   Количество: ${quantityNumber} шт.<br>
-                   Цена за единицу: ${price} руб.`, 'success');
+        showResult(`Общая стоимость заказа: <strong>${totalCost} руб.</strong>`, 'alert-success');
     }
 
     // Функция для отображения результата
-    function showResult(message, type) {
+    function showResult(message, alertClass) {
         resultDiv.innerHTML = message;
-        resultDiv.className = `result ${type}`;
+        resultDiv.className = `alert ${alertClass}`;
         resultDiv.style.display = 'block';
     }
 
