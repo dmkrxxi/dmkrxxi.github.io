@@ -122,28 +122,30 @@ li, label {
 
 /* Таблица */
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
+body main section .table-responsive table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  text-align: center !important;
 }
 
-th, td {
-  border: 1px solid #433b3f;
-  padding: 10px;
-  text-align: center;
-  color: #433b3f;
+body main section .table-responsive table th,
+body main section .table-responsive table td {
+  border: 1px solid #433b3f !important;
+  padding: 10px !important;
+  text-align: center !important;
+  color: #433b3f !important;
+  background-color: inherit !important;
 }
 
-th {
-  font-weight: bold;
+body main section .table-responsive table th {
+  font-weight: bold !important;
 }
 
-tr:nth-child(even) {
+body main section .table-responsive table tr:nth-child(even) {
     background-color: #e8e3df !important;
 }
 
-tr:nth-child(odd) {
+body main section .table-responsive table tr:nth-child(odd) {
     background-color: #d4c9c1 !important;
 }
 
