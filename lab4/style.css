@@ -94,20 +94,20 @@ section {
 
 /* Исправляем стили заголовков */
 body h1 {
-  text-align: center;
-  padding: 40px;
-  font-size: 26px;
-  color: #433b3f;
-  font-weight: normal;
-  margin: 0;
+  text-align: center !important;
+  padding: 40px !important;
+  font-size: 26px !important;
+  color: #433b3f !important;
+  font-weight: normal !important;
+  margin: 0 !important;
 }
 
 body h2, body h3 {
-  text-align: center;
-  margin: 8px;
-  font-size: 18px;
-  color: #433b3f;
-  font-weight: normal;
+  text-align: center !important;
+  margin: 8px !important;
+  font-size: 18px !important;
+  color: #433b3f !important;
+  font-weight: normal !important;
 }
 
 ul, ol {
@@ -139,11 +139,11 @@ th {
 }
 
 tr:nth-child(even) {
-    background-color: #e8e3df;
+    background-color: #e8e3df !important;
 }
 
 tr:nth-child(odd) {
-    background-color: #d4c9c1;
+    background-color: #d4c9c1 !important;
 }
 
 /* Подвал */
