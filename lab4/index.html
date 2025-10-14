@@ -1,92 +1,87 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <title>Задание 4</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Задание 4</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-  <header class="bg-gradient">
-    <div class="container-fluid">
-      <div class="d-flex align-items-center py-3">
-        <img src="https://dmkrxxi.github.io/lab2/logo.jpg" alt="Логотип" class="me-3" style="height: 80px">
-        <h1 class="h4 mb-0">Задание 4</h1>
+  <header>
+    <div>
+      <div class="header-content">
+        <img id="logo" src="https://dmkrxxi.github.io/lab2/logo.jpg" alt="Логотип сайта" class="logo">
+        <h1>Задание 4</h1>
       </div>
     </div>
   </header>
 
-  <nav class="bg-light py-3">
-    <div class="container-fluid">
-      <ul class="nav flex-column flex-md-row justify-content-center">
-        <li class="nav-item mx-2"><a class="nav-link fw-bold text-dark" href="#list">Маркированный список</a></li>
-        <li class="nav-item mx-2"><a class="nav-link fw-bold text-dark" href="#table">Таблица</a></li>
-        <li class="nav-item mx-2"><a class="nav-link fw-bold text-dark" href="#form">Анкета</a></li>
+  <nav>
+    <div>
+      <ul class="menu">
+        <li><a href="#list">Маркированный список</a></li>
+        <li><a href="#table">Таблица</a></li>
+        <li><a href="#form">Анкета</a></li>
       </ul>
     </div>
   </nav>
 
-  <main class="container my-4">
-    <div class="row">
-      <!-- На мобильных: порядок 2,1,3 -->
-      <!-- На десктопе: порядок 1,2,3 -->
-      <div class="col-12 order-2 order-md-1 mb-4" id="list">
-        <section>
-          <h2 class="text-center mb-3">Маркированный список</h2>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="http://kubsu.ru/">Абсолютная ссылка на главную страницу сайта КубГУ</a></li>
-            <li class="mb-2"><a href="https://kubsu.ru/">Абсолютная ссылка на главную страницу сайта КубГУ в протоколе https</a></li>
-            <li class="mb-2">
-              <a href="https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D1%80%D1%8B">
-                <img src="https://dmkrxxi.github.io/Mountain.jpg" width="256" height="256" alt="Ссылка-изображение" class="img-fluid">
-              </a>
-            </li>
-            <li class="mb-2"><a href="/page.html">Сокращённая ссылка на внутреннюю страницу</a></li>
-            <li class="mb-2"><a href="/">Сокращённая ссылка на главную страницу</a></li>
-            <li class="mb-2"><a href="#form">Ссылка на фрагмент текущей страницы</a></li>
-            <li class="mb-2"><a href="https://www.ozon.ru/category/smartfony-15502/?brandcertified=t&currency_price=6214.000%3B20000.000&delivery=1">Ссылка с тремя параметрами в URL</a></li>
-            <li class="mb-2"><a href="http://212.192.134.46/MegaPro/UserEntry?Action=Link_FindDoc&id=64754">Ссылка с параметром id в URL</a></li>
-            <li class="mb-2"><a href="/page-in-current-catalog.html">Относительная ссылка на страницу в текущем каталоге</a></li>
-            <li class="mb-2"><a href="/about/page.html">Относительная ссылка на страницу в каталоге about</a></li>
-            <li class="mb-2"><a href="../page.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
-            <li class="mb-2"><a href="../../page.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
-            <li class="mb-2"><p class="mb-1"><a href="">Контекстная ссылка</a> в тексте абзаца</p></li>
-            <li class="mb-2"><a href="https://www.kubsu.ru/index.php#section-content">Ссылка на фрагмент страницы стороннего сайта</a></li>
-            <li class="mb-2">
-              <p class="mb-1">Ссылки из прямоугольных и круглых областей картинки</p>
-              <div class="position-relative d-inline-block">
-                <img src="https://dmkrxxi.github.io/Figures.png" alt="Две ссылки" class="img-fluid">
-                <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82" class="position-absolute" style="left: 16%; top: 32%; width: 20%; height: 36%; background: transparent;">
-                  <span class="visually-hidden">Квадрат</span>
+  <main class="container">
+    <div class="content-wrapper">
+      <div class="row">
+        <section id="list" class="col-12 order-2 order-md-1 mb-4">
+          <h2>Маркированный список</h2>
+          <ul>
+            <li><a href="http://kubsu.ru/">Абсолютная ссылка на главную страницу сайта КубГУ</a></li>
+            <li><a href="https://kubsu.ru/">Абсолютная ссылка на главную страницу сайта КубГУ в протоколе https</a></li>
+            <li><a href="https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D1%80%D1%8B">
+              <img src="https://dmkrxxi.github.io/Mountain.jpg" width="256" height="256" alt="Ссылка-изображение">
+            </a></li>
+            <li><a href="/page.html">Сокращённая ссылка на внутреннюю страницу</a></li>
+            <li><a href="/">Сокращённая ссылка на главную страницу</a></li>
+            <li><a href="#form">Ссылка на фрагмент текущей страницы</a></li>
+            <li><a href="https://www.ozon.ru/category/smartfony-15502/?brandcertified=t&currency_price=6214.000%3B20000.000&delivery=1">Ссылка с тремя параметрами в URL</a></li>
+            <li><a href="http://212.192.134.46/MegaPro/UserEntry?Action=Link_FindDoc&id=64754">Ссылка с параметром id в URL</a></li>
+            <li><a href="/page-in-current-catalog.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+            <li><a href="/about/page.html">Относительная ссылка на страницу в каталоге about</a></li>
+            <li><a href="../page.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
+            <li><a href="../../page.html">Относительная ссылка на страницу в каталоге двумя уровнями выше</a></li>
+            <li><p><a href="">Контекстная ссылка</a> в тексте абзаца</p></li>
+            <li><a href="https://www.kubsu.ru/index.php#section-content">Ссылка на фрагмент страницы стороннего сайта</a></li>
+            <li><p>Ссылки из прямоугольных и круглых областей картинки</p>
+              <div style="position: relative; display: inline-block;">
+                <img src="https://dmkrxxi.github.io/Figures.png" alt="Две ссылки" style="max-width: 100%;">
+                <!-- Прямоугольная область -->
+                <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82" style="position: absolute; left: 16%; top: 32%; width: 20%; height: 36%; background: transparent;">
+                  <span style="display: none;">Квадрат</span>
                 </a>
-                <a href="https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D1%83%D0%B3" class="position-absolute rounded-circle" style="left: 58%; top: 34%; width: 32%; height: 32%; background: transparent;">
-                  <span class="visually-hidden">Круг</span>
+                <!-- Круглая область -->
+                <a href="https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D1%83%D0%B3" style="position: absolute; left: 58%; top: 34%; width: 32%; height: 32%; background: transparent; border-radius: 50%;">
+                  <span style="display: none;">Круг</span>
                 </a>
               </div>
             </li>
-            <li class="mb-2"><a href="">Ссылка с пустым href</a></li>
-            <li class="mb-2"><a>Ссылка без href</a></li>
-            <li class="mb-2"><a href="https://www.ozon.ru/" rel="nofollow">Ссылка, по которой запрещён переход поисковикам</a></li>
-            <li class="mb-2"><a href="https://www.ozon.ru/">Ссылка, запрещённая для индексации поисковиками</a></li>
-            <li class="mb-2">
-              <p class="mb-1">Нумерованный список ссылок с подписями title</p>
+            <li><a href="">Ссылка с пустым href</a></li>
+            <li><a>Ссылка без href</a></li>
+            <li><a href="https://www.ozon.ru/" rel="nofollow">Ссылка, по которой запрещён переход поисковикам</a></li>
+            <li><!--<noindex>--><a href="https://www.ozon.ru/">Ссылка, запрещённая для индексации поисковиками</a></li>
+            <li><p>Нумерованный список ссылок с подписями title</p>
               <ol>
-                <li><a href="https://www.kubsu.ru/index.php" title="Подпись первой ссылки">Первая ссылка</a></li>
-                <li><a href="https://www.kubsu.ru/ru/university/departments" title="Подпись второй ссылки">Вторая ссылка</a></li>
-                <li><a href="https://www.kubsu.ru/ru/fktipm" title="Подпись третьей ссылки">Третья ссылка</a></li>
+                <li><a href="https://www.kubsu.ru/index.php" title="Подпись первой ссылки ">Первая ссылка</a></li>
+                <li><a href="https://www.kubsu.ru/ru/university/departments" title="Подпись второй ссылки ">Вторая ссылка</a></li>
+                <li><a href="https://www.kubsu.ru/ru/fktipm" title="Подпись третьей ссылки ">Третья ссылка</a></li>
               </ol>
             </li>
-            <li class="mb-2"><a href="ftp://user:password@example.com/file.txt">Ссылка на файл на FTP с авторизацией</a></li>
+            <li><a href="ftp://user:password@example.com/file.txt">Ссылка на файл на FTP с авторизацией</a></li>
           </ul>
         </section>
-      </div>
 
-      <div class="col-12 order-1 order-md-2 mb-4" id="table">
-        <section>
-          <h2 class="text-center mb-3">Таблица</h2>
+        <section id="table" class="col-12 order-1 order-md-2 mb-4">
+          <h2>Таблица</h2>
           <div class="table-responsive">
-            <table class="table table-bordered text-center">
+            <table class="table">
               <tr>
                 <th colspan="4">Расписание</th>
               </tr>
@@ -126,87 +121,93 @@
             </table>
           </div>
         </section>
-      </div>
 
-      <div class="col-12 order-3 mb-4" id="form">
-        <section>
-          <h2 class="text-center mb-3">Форма</h2>
-          <form action="/form-submitted.html" method="POST" class="row g-3">
-            <div class="col-12">
-              <label class="form-label">ФИО:</label>
-              <input type="text" class="form-control" name="field-name-1" placeholder="Введите ваши ФИО" required>
+        <section id="form" class="col-12 order-3 mb-4">
+          <h2>Форма</h2>
+          <form action="/form-submitted.html" method="POST">
+            <div class="mb-3">
+              <label class="form-label">
+                ФИО:<br>
+                <input type="text" class="form-control" name="field-name-1" placeholder="Введите ваши ФИО" required>
+              </label>
             </div>
 
-            <div class="col-12">
-              <label class="form-label">Номер телефона:</label>
-              <input type="tel" class="form-control" pattern="\+?[0-9\s\-\(\)]+" name="phone-number" placeholder="+7" required>
+            <div class="mb-3">
+              <label class="form-label">
+                Номер телефона:<br>
+                <input type="tel" class="form-control" pattern="\+?[0-9\s\-\(\)]+" name="phone-number" placeholder="+7" required>
+              </label>
             </div>
 
-            <div class="col-12">
-              <label class="form-label">E-mail:</label>
-              <input type="email" class="form-control" name="e-mail" placeholder="example@gmail.com" required>
+            <div class="mb-3">
+              <label class="form-label">
+                E-mail:<br>
+                <input type="email" class="form-control" name="e-mail" placeholder="example@gmail.com" required>
+              </label>
             </div>
 
-            <div class="col-12">
-              <label class="form-label">Дата рождения:</label>
-              <input type="date" class="form-control" name="field-date" required>
+            <div class="mb-3">
+              <label class="form-label">
+                Дата рождения:<br>
+                <input type="date" class="form-control" name="field-date" required>
+              </label>
             </div>
 
-            <div class="col-12">
-              <label class="form-label">Пол:</label>
-              <div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" checked name="radio-gender" value="male" id="male" required>
-                  <label class="form-check-label" for="male">Мужской</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="radio-gender" value="female" id="female" required>
-                  <label class="form-check-label" for="female">Женский</label>
-                </div>
+            <div class="mb-3">
+              Пол:<br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" checked name="radio-gender" value="male" id="male" required>
+                <label class="form-check-label" for="male">Мужской</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="radio-gender" value="female" id="female" required>
+                <label class="form-check-label" for="female">Женский</label>
               </div>
             </div>
 
-            <div class="col-12">
-              <label class="form-label">Любимый язык программирования:</label>
-              <select class="form-select" name="field-name-2[]" multiple required>
-                <option value="item1">Pascal</option>
-                <option value="item2">C</option>
-                <option value="item3">C++</option>
-                <option value="item4">JavaScript</option>
-                <option value="item5">PHP</option>
-                <option value="item6">Python</option>
-                <option value="item7">Java</option>
-                <option value="item8">Haskel</option>
-                <option value="item9">Clojure</option>
-                <option value="item10">Prolog</option>
-                <option value="item11">Scala</option>
-              </select>
+            <div class="mb-3">
+              <label class="form-label">
+                Любимый язык программирования:<br>
+                <select class="form-select" name="field-name-2[]" multiple required>
+                  <option value="item1">Pascal</option>
+                  <option value="item2">C</option>
+                  <option value="item3">C++</option>
+                  <option value="item4">JavaScript</option>
+                  <option value="item5">PHP</option>
+                  <option value="item6">Python</option>
+                  <option value="item7">Java</option>
+                  <option value="item8">Haskel</option>
+                  <option value="item9">Clojure</option>
+                  <option value="item10">Prolog</option>
+                  <option value="item11">Scala</option>
+                </select>
+              </label>
             </div>
 
-            <div class="col-12">
-              <label class="form-label">Биография:</label>
-              <textarea class="form-control" name="field-name-3" placeholder="Расскажите о себе" required></textarea>
+            <div class="mb-3">
+              <label class="form-label">
+                Биография:<br>
+                <textarea class="form-control" name="field-name-3" placeholder="Расскажите о себе" required></textarea>
+              </label>
             </div>
 
-            <div class="col-12">
+            <div class="mb-3">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" checked name="check-1" id="contract" required>
                 <label class="form-check-label" for="contract">С контрактом ознакомлен(а)</label>
               </div>
             </div>
 
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary">Сохранить</button>
-            </div>
+            <button type="submit" class="btn btn-primary">Сохранить</button>
           </form>
         </section>
       </div>
     </div>
   </main>
 
-  <footer class="bg-gradient py-3 mt-4">
-    <div class="container-fluid">
-      <p class="text-center mb-0">(c) Корнилова Диана</p>
+  <footer>
+    <div class="container">
+      <p>(c) Корнилова Диана</p>
     </div>
   </footer>
 
