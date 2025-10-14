@@ -1,4 +1,4 @@
-/* Общие стили */
+/* Общие стили из предыдущих заданий */
 
 *{
   margin: 0;
@@ -31,12 +31,9 @@ header {
 
 .header-content {
     display: flex;
-}
-
-#logo {
-  float: left;
-  height: 150px;
-  margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 /* Для мобильных устройств */
@@ -86,38 +83,29 @@ img {
   height: auto;
 }
 
-/* Поменяем порядок секций */
-
-#table {
-  order: 1;
-}
-
-#list {
-  order: 2;
-}
-
-#form {
-  order: 3;
-}
-
 section {
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  width: 100%;
 }
 
-h1 {
+/* СТИЛИ ДЛЯ ЗАГОЛОВКОВ */
+body header h1 {
   text-align: center;
   padding: 40px;
   font-size: 26px;
   color: #433b3f;
+  font-weight: bold;
+  margin: 0;
 }
 
-h2, h3 {
+body main section h2 {
   text-align: center;
   margin: 8px;
   font-size: 18px;
   color: #433b3f;
+  font-weight: bold;
 }
 
 ul, ol {
@@ -127,33 +115,6 @@ ul, ol {
 
 li, label {
   margin: 5px;
-}
-
-/* Таблица */
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-}
-
-th, td {
-  border: 1px solid #433b3f;
-  padding: 10px;
-  text-align: center;
-  color: #433b3f;
-}
-
-th {
-  font-weight: bold;
-}
-
-tr:nth-child(even) {
-    background-color: #e8e3df;
-}
-
-tr:nth-child(odd) {
-    background-color: #d4c9c1;
 }
 
 /* Подвал */
@@ -183,17 +144,69 @@ footer {
   .content-wrapper {
     align-items: flex-start;
   }
+}
 
-  #table {
-    order: 2;
-  }
+/* СТИЛИ ДЛЯ КАЛЬКУЛЯТОРА */
+.calculator {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
 
-  #list {
-    order: 1;
-  }
+.form-group {
+  margin-bottom: 20px;
+}
 
-  #form {
-    order: 3;
-  }
+.calculator label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #433b3f;
+}
 
+.calculator input, 
+.calculator select, 
+.calculator button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d4c9c1;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #f8f8f8;
+}
+
+.calculator button {
+  background-color: #d4c9c1;
+  color: #433b3f;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.calculator button:hover {
+  background-color: #c4b4a9;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.success {
+  background-color: #e8e3df;
+  color: #433b3f;
+  border: 1px solid #d4c9c1;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
 }
