@@ -1,6 +1,5 @@
-/* Общие стили из предыдущих заданий */
-
-*{
+/* Общие стили */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,6 +14,7 @@ body {
   color: #433b3f;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
@@ -23,6 +23,7 @@ body {
   margin: 0 auto;
 }
 
+/* Header */
 header {
   width: 100%;
   height: 150px;
@@ -30,14 +31,13 @@ header {
 }
 
 .header-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-/* Для мобильных устройств */
-
+/* Navigation */
 nav {
   background-color: #d4c9c1;
   padding: 20px;
@@ -63,11 +63,11 @@ nav {
   padding: 8px 0;
 }
 
-/* Основное содержимое */
-
+/* Main content */
 main {
   width: 100%;
   padding: 20px 0;
+  flex-grow: 1;
 }
 
 .content-wrapper {
@@ -78,11 +78,6 @@ main {
   flex-direction: column;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 section {
   justify-content: center;
   align-items: center;
@@ -90,63 +85,17 @@ section {
   width: 100%;
 }
 
-/* СТИЛИ ДЛЯ ЗАГОЛОВКОВ */
-body header h1 {
-  text-align: center;
-  padding: 40px;
-  font-size: 26px;
-  color: #433b3f;
-  font-weight: bold;
-  margin: 0;
-}
-
-body main section h2 {
-  text-align: center;
-  margin: 8px;
-  font-size: 18px;
-  color: #433b3f;
-  font-weight: bold;
-}
-
-ul, ol {
-  margin: 5px;
-  padding-left: 20px;
-}
-
-li, label {
-  margin: 5px;
-}
-
-/* Подвал */
-
+/* Footer */
 footer {
   width: 100%;
   background: linear-gradient(110deg, #e8e3df, #d4c9c1);
   color: #433b3f;
   text-align: center;
   padding: 20px 0;
+  margin-top: auto;
 }
 
-/* Для планшетов, ноутбуков */
-
-@media screen and (min-width: 768px) {
-  .menu {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .menu li {
-    margin-bottom: 0;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  
-  .content-wrapper {
-    align-items: flex-start;
-  }
-}
-
-/* СТИЛИ ДЛЯ КАЛЬКУЛЯТОРА */
+/* Calculator styles */
 .calculator {
   background: white;
   padding: 30px;
@@ -209,4 +158,18 @@ footer {
   background-color: #f8d7da;
   color: #721c24;
   border: 1px solid #f5c6cb;
+}
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+  .menu {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .menu li {
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
