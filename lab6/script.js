@@ -8,6 +8,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
     const propertyDiv = document.getElementById("propertyDiv");
     const propertyCheck = document.getElementById("propertyCheck");
     const resultDiv = document.getElementById("result");
+    const calcForm = document.getElementById("calcForm");
     const prices = {
         serviceTypes: {
             type1: 499,
@@ -74,5 +75,10 @@ window.addEventListener('DOMContentLoaded', function (event) {
     });
     optionsSelect.addEventListener("change", updatePrice);
     propertyCheck.addEventListener("change", updatePrice);
+    if (calcForm) {
+        calcForm.addEventListener("submit", function(event) {
+            event.preventDefault(); 
+        });
+    }
     updatePrice();
 });
