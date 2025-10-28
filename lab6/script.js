@@ -1,48 +1,72 @@
 /*jslint browser: true, devel: true, this: true*/
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener('DOMContentLoaded', function (event) {
     "use strict";
-    var quantityInput = document.getElementById("quantity");
-    var productSelect = document.getElementById("product");
-    var calculateButton = document.getElementById("calculate");
-    var resultDiv = document.getElementById("result");
+    const quantityInput = document.getElementById("quantity");
+    const serviceTypeRadios = document.getElementsByName("serviceType");
+    const optionsDiv = document.getElementById("optionsDiv");
+    const optionsSelect = document.getElementById("optionsSelect");
+    const propertyDiv = document.getElementById("propertyDiv");
+    const propertyCheck = document.getElementById("propertyCheck");
+    const resultDiv = document.getElementById("result");
+    const prices = {
+        serviceTypes: {
+            type1: 499,
+            type2: 769,
+            type3: 939
+        },
+        options: {
+            option1: 119,
+            option2: 139,
+            option3: 135
+        },
+        property: 49
+    };
     function formatNumber(num) {
         return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     }
-    function validateInput(input) {
-        var regex = /^\d+$/;
-        return regex.test(input);
-    }
     function showResult(message, alertClass) {
         resultDiv.innerHTML = message;
-        resultDiv.className = "alert " + alertClass;
+        resultDiv.className = "alert " + alertClass+ " mt-3";
         resultDiv.style.display = "block";
     }
-    function calculateCost() {
-        var quantity = quantityInput.value.trim();
-        var price = parseInt(productSelect.value, 10);
-        var quantityNumber;
-        var totalCost;
-        var formattedCost;
-        if (!validateInput(quantity)) {
-            showResult("Ошибка: введите корректное количество (только цифры)", "alert-danger");
+    function updatePrice() {
+        let unitPrice = 0;
+        let quantity = parseInt(quantityInput.value, 10);
+        if (quantity <= 0) {
+            showResult("Ошибка: количество должно быть 1 или больше.", "alert-danger");
             return;
         }
-        quantityNumber = parseInt(quantity, 10);
-        if (quantityNumber <= 0) {
-            showResult("Ошибка: количество должно быть больше 0", "alert-danger");
+        if (isNaN(quantity)) {
+            showResult("Введите положительное число.", "alert-secondary");
             return;
         }
-        totalCost = quantityNumber * price;
-        formattedCost = formatNumber(totalCost);
-        showResult("Общая стоимость: <strong>" + formattedCost + " руб.</strong>", "alert-success");
+        let selectedType = document.querySelector('input[name="serviceType"]:checked').value;
+        if (selectedType === "type1") {
+            unitPrice = prices.serviceTypes.type1;
+            optionsDiv.style.display = "none";
+            propertyDiv.style.display = "none";
+        } else if (selectedType === "type2") {
+            unitPrice = prices.serviceTypes.type2;
+            optionsDiv.style.display = "block";
+            propertyDiv.style.display = "none";
+            unitPrice += prices.options[optionsSelect.value];
+        } else if (selectedType === "type3") {
+            unitPrice = prices.serviceTypes.type3;
+            optionsDiv.style.display = "none";
+            propertyDiv.style.display = "block";
+            if (propertyCheck.checked) {
+                unitPrice += prices.property;
+            }
+        }
+        let totalPrice = unitPrice * quantity;
+        let formattedPrice = formatNumber(totalPrice);
+        showResult("Итоговая стоимость: <strong>" + formattedPrice + " руб.</strong>", "alert-success");
     }
-    calculateButton.addEventListener("click", function (event) {
-        event.preventDefault();
-        calculateCost();
+    quantityInput.addEventListener("input", updatePrice);
+    serviceTypeRadios.forEach(function (radio) {
+        radio.addEventListener("change", updatePrice);
     });
-    quantityInput.addEventListener("keypress", function (event) {
-        if (event.key === "Enter") {
-            calculateCost();
-        }
-    });
+    optionsSelect.addEventListener("change", updatePrice);
+    propertyCheck.addEventListener("change", updatePrice);
+    updatePrice();
 });
