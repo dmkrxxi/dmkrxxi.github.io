@@ -1,0 +1,121 @@
+body {
+    background-color: #e8e3df;
+    font-family: Arial, sans-serif;
+    color: #433b3f;
+    line-height: 1.4;
+}
+
+.bg-gradient {
+    background: linear-gradient(70deg, #e8e3df, #d4c9c1) !important;
+}
+
+footer.bg-gradient {
+    background: linear-gradient(110deg, #e8e3df, #d4c9c1) !important;
+}
+
+.navbar-light {
+    background-color: #d4c9c1 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #433b3f;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #000;
+}
+
+.card {
+    border: none;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+}
+
+.card-title {
+    color: #433b3f;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #d4c9c1;
+    border-color: #d4c9c1;
+    color: #433b3f;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #c4b4a9;
+    border-color: #c4b4a9;
+    color: #433b3f;
+}
+
+.form-check-input:checked {
+    background-color: #c4b4a9;
+    border-color: #c4b4a9;
+}
+
+.form-control:focus, .form-select:focus, .btn:focus {
+    box-shadow: 0 0 0 0.25rem rgba(212, 201, 193, 0.5); /* Цвет фокуса под цвет темы */
+    border-color: #c4b4a9;
+}
+
+
+.slider-container {
+    padding-bottom: 50px; 
+}
+
+.slider-container img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain; 
+    border-radius: 5px; 
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 10px; 
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li button:before {
+    color: #433b3f !important;
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+}
+
+.slick-prev, .slick-next {
+    z-index: 10;
+    top: 50%; 
+    transform: translateY(-50%)
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #433b3f !important;
+    font-size: 30px;
+    opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+    .slick-prev, .slick-next {
+        width: 25px;
+        height: 25px;
+        z-index: 10;
+    }
+    .slick-prev { left: 0px; }
+    .slick-next { right: 0px; }
+    .slick-prev:before, .slick-next:before {
+        font-size: 20px;
+    }
+    .slider-container img {
+        height: 300px;
+    }
+}
