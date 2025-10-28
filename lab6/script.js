@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
     }
     function updatePrice() {
         let unitPrice = 0;
-        let quantity = parseInt(quantityInput.value, 10);
+        let quantity = parseFloat(quantityInput.value);
         if (quantity <= 0) {
             showResult("Ошибка: количество должно быть 1 или больше.", "alert-danger");
             return;
@@ -39,6 +39,10 @@ window.addEventListener('DOMContentLoaded', function (event) {
         if (isNaN(quantity)) {
             showResult("Введите положительное число.", "alert-secondary");
             return;
+        }
+        if (quantity % 1 !== 0) {
+        showResult("Ошибка: количество должно быть целым числом.", "alert-danger");
+        return; 
         }
         let selectedType = document.querySelector('input[name="serviceType"]:checked').value;
         if (selectedType === "type1") {
