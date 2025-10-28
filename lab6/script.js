@@ -31,19 +31,17 @@ window.addEventListener('DOMContentLoaded', function (event) {
     }
     function updatePrice() {
         let unitPrice = 0;
-        if (quantityInput.value.trim() === "") {
+        let rawQuantity = quantityInput.value.trim();
+        if (rawQuantity === "") {
             showResult("Введите количество.", "alert-secondary");
             return;
         }
-        let quantity = parseFloat(quantityInput.value); 
-        if (isNaN(quantity)) {
-            showResult("Ошибка: введите корректное число.", "alert-danger");
+        const regex = /^\d+$/;
+        if (!regex.test(rawQuantity)) {
+            showResult("Ошибка: количество должно быть целым числом (только цифры).", "alert-danger");
             return;
         }
-        if (quantity % 1 !== 0) {
-            showResult("Ошибка: количество должно быть целым числом.", "alert-danger");
-            return; 
-        }
+        let quantity = parseInt(rawQuantity, 10);
         if (quantity < 1) {
             showResult("Ошибка: количество должно быть 1 или больше.", "alert-danger");
             return;
@@ -67,7 +65,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
             }
         }
         let totalPrice = unitPrice * quantity;
-        let formattedPrice = formatNumber(totalPrice);
+        let formattedPrice = formatNumber(totalCost);
         showResult("Итоговая стоимость: <strong>" + formattedPrice + " руб.</strong>", "alert-success");
     }
     quantityInput.addEventListener("input", updatePrice);
