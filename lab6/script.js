@@ -1,5 +1,5 @@
 /*jslint browser: true, devel: true, this: true*/
-window.addEventListener('DOMContentLoaded', function (event) {
+window.addEventListener("DOMContentLoaded", function (event) {
     "use strict";
     const quantityInput = document.getElementById("quantity");
     const serviceTypeRadios = document.getElementsByName("serviceType");
@@ -10,17 +10,17 @@ window.addEventListener('DOMContentLoaded', function (event) {
     const resultDiv = document.getElementById("result");
     const calcForm = document.getElementById("calcForm");
     const prices = {
-        serviceTypes: {
-            type1: 499,
-            type2: 769,
-            type3: 939
-        },
         options: {
             option1: 119,
             option2: 139,
             option3: 135
         },
-        property: 49
+        property: 49,
+        serviceTypes: {
+            type1: 499,
+            type2: 769,
+            type3: 939
+        }
     };
     function formatNumber(num) {
         return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
