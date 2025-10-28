@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
             }
         }
         let totalPrice = unitPrice * quantity;
-        let formattedPrice = formatNumber(totalCost);
+        let formattedPrice = formatNumber(totalPrice);
         showResult("Итоговая стоимость: <strong>" + formattedPrice + " руб.</strong>", "alert-success");
     }
     quantityInput.addEventListener("input", updatePrice);
