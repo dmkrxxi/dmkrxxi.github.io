@@ -31,18 +31,22 @@ window.addEventListener('DOMContentLoaded', function (event) {
     }
     function updatePrice() {
         let unitPrice = 0;
-        let quantity = parseFloat(quantityInput.value);
-        if (quantity <= 0) {
-            showResult("Ошибка: количество должно быть 1 или больше.", "alert-danger");
+        if (quantityInput.value.trim() === "") {
+            showResult("Введите количество.", "alert-secondary");
             return;
         }
+        let quantity = parseFloat(quantityInput.value); 
         if (isNaN(quantity)) {
-            showResult("Введите положительное число.", "alert-secondary");
+            showResult("Ошибка: введите корректное число.", "alert-danger");
             return;
         }
         if (quantity % 1 !== 0) {
-        showResult("Ошибка: количество должно быть целым числом.", "alert-danger");
-        return; 
+            showResult("Ошибка: количество должно быть целым числом.", "alert-danger");
+            return; 
+        }
+        if (quantity < 1) {
+            showResult("Ошибка: количество должно быть 1 или больше.", "alert-danger");
+            return;
         }
         let selectedType = document.querySelector('input[name="serviceType"]:checked').value;
         if (selectedType === "type1") {
