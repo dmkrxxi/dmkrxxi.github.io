@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const responseMsg = document.getElementById('formResponse');
     const phoneInput = form.querySelector('[name="phone"]');
     const phonePattern = /^(\+?\d{1,3}[- ]?)?(\(?\d{3}\)?[- ]?)?\d{3}[- ]?\d{2}[- ]?\d{2}$/;
-    const phonePattern = /^(\+?\d{1,3}[- ]?)?(\(?\d{3}\)?[- ]?)?\d{3}[- ]?\d{2}[- ]?\d{2}$/;
+    const emailInput = form.querySelector('[name="email"]');
     const emailPattern = new RegExp('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$', 'i'); // 'i' для нечувствительности к регистру
 
     // History API: Открытие формы
@@ -91,3 +91,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
