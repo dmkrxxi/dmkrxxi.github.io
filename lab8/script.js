@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('feedbackForm');
     const modalEl = document.getElementById('feedbackModal');
-    // Инициализация объекта Bootstrap Modal
     const modal = new bootstrap.Modal(modalEl);
     const openBtn = document.getElementById('openFormBtn');
     const responseMsg = document.getElementById('formResponse');
     const phoneInput = form.querySelector('[name="phone"]');
     const phonePattern = /^(\+?\d{1,3}[- ]?)?(\(?\d{3}\)?[- ]?)?\d{3}[- ]?\d{2}[- ]?\d{2}$/;
+    const phonePattern = /^(\+?\d{1,3}[- ]?)?(\(?\d{3}\)?[- ]?)?\d{3}[- ]?\d{2}[- ]?\d{2}$/;
+    const emailPattern = new RegExp('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$', 'i'); // 'i' для нечувствительности к регистру
 
-    // --- 1. History API: Открытие формы ---
+    // History API: Открытие формы
     openBtn.addEventListener('click', () => {
-        // Добавляем состояние в историю и открываем модальное окно
         history.pushState({ modalOpen: true }, '', '#feedback');
         modal.show();
     });
@@ -25,12 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Закрытие формы через UI (крестик, Escape) должно сменить URL обратно
     modalEl.addEventListener('hidden.bs.modal', () => {
         if (window.location.hash === '#feedback') {
-            // Если форма закрыта и URL изменен, возвращаемся назад
             history.back(); 
         }
     });
 
-    // --- 2. LocalStorage ---
+    // LocalStorage
     const fields = ['fio', 'email', 'phone', 'org', 'message'];
     
     // Загрузка сохраненных значений
@@ -49,14 +48,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- 3. Отправка данных (Fetch) ---
+    // Отправка данных (Fetch)
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
+        if (!emailPattern.test(emailInput.value.trim())) {
+            responseMsg.className = 'mt-3 p-2 text-center d-block rounded error';
+            responseMsg.textContent = 'Ошибка: Пожалуйста, введите корректный адрес Email.';
+            emailInput.focus(); 
+            return; 
+        }
         if (!phonePattern.test(phoneInput.value.trim())) {
             responseMsg.className = 'mt-3 p-2 text-center d-block rounded error';
             responseMsg.textContent = 'Ошибка: Пожалуйста, введите корректный номер телефона.';
-            phoneInput.focus(); // Устанавливаем фокус на поле для исправления
-            return; // Прерываем отправку формы
+            phoneInput.focus();
+            return;
         }
         responseMsg.className = 'mt-3 p-2 text-center d-block rounded';
         responseMsg.classList.remove('success', 'error');
@@ -84,4 +89,5 @@ document.addEventListener('DOMContentLoaded', () => {
             responseMsg.classList.add('error');
         }
     });
+
 });
