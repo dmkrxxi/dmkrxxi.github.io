@@ -37,7 +37,12 @@
                             <input type="text" name="fio" class="form-control" placeholder="ФИО" required>
                         </div>
                         <div class="mb-2">
-                            <input type="email" name="email" class="form-control" placeholder="Email" required>
+                            <input type="email" 
+                                name="email" 
+                                class="form-control"
+                                placeholder="Email"
+                                required
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                         </div>
                         <div class="mb-2">
                             <input type="tel" name="phone" 
@@ -75,4 +80,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
