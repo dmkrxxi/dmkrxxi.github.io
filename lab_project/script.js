@@ -187,23 +187,36 @@ nextBtn.addEventListener('click', () => {
 
 // Прокрутка отзывов
 const reviewsSlider = document.getElementById('reviewsSlider');
-const prevReviewBtn = document.getElementById('prevReview');
-const nextReviewBtn = document.getElementById('nextReview');
+const prevReview = document.getElementById('prevReview');  // ИЗМЕНИЛ НА prevReview
+const nextReview = document.getElementById('nextReview');  // ИЗМЕНИЛ НА nextReview
 
-if (prevReviewBtn && nextReviewBtn && reviewsSlider) {
-    prevReviewBtn.addEventListener('click', () => {
+// Проверяем, что все элементы найдены
+console.log('Слайдер отзывов:', reviewsSlider);
+console.log('Кнопка назад:', prevReview);
+console.log('Кнопка вперед:', nextReview);
+
+// Только если все элементы существуют, добавляем обработчики
+if (reviewsSlider && prevReview && nextReview) {
+    prevReview.addEventListener('click', () => {
+        console.log('Прокрутка отзывов назад');
         reviewsSlider.scrollBy({
             left: -370,
             behavior: 'smooth'
         });
     });
 
-    nextReviewBtn.addEventListener('click', () => {
+    nextReview.addEventListener('click', () => {
+        console.log('Прокрутка отзывов вперед');
         reviewsSlider.scrollBy({
             left: 370,
             behavior: 'smooth'
         });
     });
+} else {
+    console.error('Не найдены элементы для прокрутки отзывов!');
+    console.error('Найден слайдер:', reviewsSlider);
+    console.error('Найдена кнопка prevReview:', prevReview);
+    console.error('Найдена кнопка nextReview:', nextReview);
 }
 
 // Отправка формы с использованием fetch
@@ -301,3 +314,4 @@ document.addEventListener('keydown', function(e) {
     }
 
 });
+
