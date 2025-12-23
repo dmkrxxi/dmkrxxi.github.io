@@ -185,43 +185,6 @@ nextBtn.addEventListener('click', () => {
     });
 });
 
-// Прокрутка отзывов
-const reviewsSlider = document.getElementById('reviewsSlider');
-const prevReview = document.getElementById('prevReview');
-const nextReview = document.getElementById('nextReview');
-
-// ВАЖНО: проверьте эти логи в консоли браузера (F12)
-console.log('Элементы отзывов:');
-console.log('- reviewsSlider:', reviewsSlider);
-console.log('- prevReview:', prevReview);
-console.log('- nextReview:', nextReview);
-
-if (reviewsSlider && prevReview && nextReview) {
-    prevReview.addEventListener('click', function() {
-        console.log('Нажата кнопка "Предыдущий отзыв"');
-        reviewsSlider.scrollBy({
-            left: -370, // Ширина карточки отзыва + gap
-            behavior: 'smooth'
-        });
-    });
-
-    nextReview.addEventListener('click', function() {
-        console.log('Нажата кнопка "Следующий отзыв"');
-        reviewsSlider.scrollBy({
-            left: 370, // Ширина карточки отзыва + gap
-            behavior: 'smooth'
-        });
-    });
-    
-    console.log('Обработчики для кнопок отзывов успешно добавлены');
-} else {
-    console.warn('Не удалось найти все элементы для управления отзывами');
-}
-// Отправка формы с использованием fetch
-const contactForm = document.getElementById('contactForm');
-const formMessage = document.getElementById('formMessage');
-// ... продолжение кода ...
-
 // Отправка формы с использованием fetch
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
@@ -310,7 +273,4 @@ document.addEventListener('keydown', function(e) {
         closeModal(contactsModal);
         closeModal(formModal);
     }
-
 });
-
-
