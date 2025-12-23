@@ -1,1 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кофейня "Мираж"</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">Кофейня <span>Мираж</span></a>
+            
+            <!-- Бургер меню для мобильных -->
+            <div class="burger-menu" id="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Десктопное меню -->
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li class="dropdown">
+                        <a href="#menu">Меню <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#coffee">Кофе</a>
+                            <a href="#pastries">Выпечка</a>
+                            <a href="#desserts">Десерты</a>
+                        </div>
+                    </li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><button class="contact-btn" id="openContacts">Контакты</button></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Мобильное меню -->
+        <nav class="mobile-nav" id="mobileNav">
+            <div class="mobile-nav-header">
+                <div class="mobile-logo">Кофейня <span>Мираж</span></div>
+                <button class="mobile-close-btn" id="mobileCloseBtn">&times;</button>
+            </div>
+            <ul>
+                <li><a href="#home" class="mobile-nav-link"><i class="fas fa-home"></i>Главная</a></li>
+                <li class="mobile-dropdown">
+                    <a href="#menu" class="mobile-nav-link"><i class="fas fa-utensils"></i>Меню <i class="fas fa-chevron-down mobile-arrow"></i></a>
+                    <div class="mobile-dropdown-content">
+                        <a href="#coffee"><i class="fas fa-coffee"></i>Кофе</a>
+                        <a href="#pastries"><i class="fas fa-bread-slice"></i>Выпечка</a>
+                        <a href="#desserts"><i class="fas fa-ice-cream"></i>Десерты</a>
+                    </div>
+                </li>
+                <li><a href="#about" class="mobile-nav-link"><i class="fas fa-info-circle"></i>О нас</a></li>
+                <li><a href="#contactsModal" class="mobile-nav-link" id="mobileOpenContacts"><i class="fas fa-phone"></i>Контакты</a></li>
+                <li><button class="mobile-contact-btn" id="mobileOpenForm"><i class="fas fa-calendar-alt"></i>Забронировать столик</button></li>
+            </ul>
+            <div class="mobile-footer">
+                <div class="mobile-contact-info">
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Ул. Кофейная, 15</p>
+                </div>
+                <div class="mobile-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
+    <!-- Видео секция -->
+    <section class="video-section" id="home">
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="coffee_video.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="video-content">
+            <h1 class="video-title">Мираж</h1>
+            <p class="video-subtitle">Аромат свежего кофе, уютная атмосфера и незабываемые вкусы. Ваш идеальный уголок для встреч и отдыха.</p>
+            <button class="contact-form-btn" id="openForm">Забронировать столик</button>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery">
+        <h2 class="section-title">Наша кофейня</h2>
+        <div class="gallery-container">
+            <div class="gallery-slider" id="gallerySlider">
+                <div class="gallery-slide">
+                    <img src="interior1.jpg" alt="Интерьер кофейни">
+                </div>
+                <div class="gallery-slide">
+                    <img src="coffee_making.jpg" alt="Приготовление кофе">
+                </div>
+                <div class="gallery-slide">
+                    <img src="desserts_display.jpg" alt="Витрина с десертами">
+                </div>
+                <div class="gallery-slide">
+                    <img src="cozy_corner.jpg" alt="Уголок в кофейне">
+                </div>
+                <div class="gallery-slide">
+                    <img src="barista_work.jpg" alt="Работа бариста">
+                </div>
+                <div class="gallery-slide">
+                    <img src="coffee_art.jpg" alt="Кофейное искусство">
+                </div>
+            </div>
+            <div class="gallery-controls">
+                <button class="gallery-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                <button class="gallery-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about">
+        <h2 class="section-title">О нас</h2>
+        <div class="about-container">
+            <p class="about-text">
+                Кофейня "Мираж" — это место, где реальность становится вкуснее. 
+                Мы открылись в 2018 году с целью создать пространство, где каждый сможет 
+                насладиться идеальной чашкой кофе и погрузиться в уютную атмосферу.
+            </p>
+            <p class="about-text">
+                Наши бариста проходят специальное обучение и используют только 
+                отборные сорта кофе из Эфиопии, Колумбии и Бразилии. 
+                Мы обжариваем зерна на собственном производстве, чтобы гарантировать 
+                свежесть и насыщенность вкуса в каждой чашке.
+            </p>
+            <p class="about-text">
+                В нашем меню вы найдете не только классические кофейные напитки, 
+                но и авторские рецепты, разработанные нашими специалистами. 
+                А свежая выпечка и десерты готовятся каждое утро в нашей кондитерской.
+            </p>
+            <p class="contact-person">Управляющий: Корнилова Д.Д.</p>
+        </div>
+    </section>
+
+    <!-- Разделы с меню -->
+    <section class="products-section" id="menu">
+        <div class="products-container">
+            <!-- Кофе -->
+            <h3 class="category-title" id="coffee">Кофе</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="espresso.jpg" alt="Эспрессо" class="product-img">
+                    <div class="product-info">
+                        <h4 class="product-name">Эспрессо классический</h4>
+                        <p class="product-price">180 ₽</p>
+                        <button class="buy-btn">Заказать</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="cappuccino.jpg" alt="Капучино" class="product-img">
+                    <div class="product-info">
+                        <h4 class="product-name">Капучино с сиропом</h4>
+                        <p class="product-price">250 ₽</p>
+                        <button class="buy-btn">Заказать</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="latte.jpg" alt="Латте" class="product-img">
+                    <div class="product-info">
+                        <h4 class="product-name">Латте арт</h4>
+                        <p class="product-price">280 ₽</p>
+                        <button class="buy-btn">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Выпечка -->
+            <h3 class="category-title" id="pastries">Выпечка</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="croissant.jpg" alt="Круассан" class="product-img">
+                    <div class="product-info">
+                        <h4 class="product-name">Круассан с шоколадом</h4>
+                        <p class="product-price">150 ₽</p>
+                        <button class="buy-btn">Заказать</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="cheesecake.jpg" alt="Чизкейк" class="product-img">
+                    <div class="product-info">
+                        <h4 class="product-name">Чизкейк Нью-Йорк</h4>
+                        <p class="product-price">320 ₽</p>
+                        <button class="buy-btn">Заказать</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="apple_pie.jpg" alt="Яблочный пирог" class="product-img">
+                    <div class="product-info">
+                        <h4 class="product-name">Яблочный пирог</h4>
+                        <p class="product-price">210 ₽</p>
+                        <button class="buy-btn">Заказать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Десерты -->
+            <h3 class="category-title" id="desserts">Десерты</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="tiramisu.jpg" alt="Тирамису" class="product-img">
+                    <div class="product-info">
+                        <h4 class="product-name">Тирамису классический</h4>
+                        <p class="product-price">290 ₽</p>
+                        <button class="buy-btn">Заказать</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="brownie.jpg" alt="Брауни" class="product-img">
+                    <div class="product-info">
+                        <h4 class="product-name">Брауни с орехами</h4>
+                        <p class="product-price">240 ₽</p>
+                        <button class="buy-btn">Заказать</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="macarons.jpg" alt="Макаруны" class="product-img">
+                    <div class="product-info">
+                        <h4 class="product-name">Набор макарунов (6 шт)</h4>
+                        <p class="product-price">350 ₽</p>
+                        <button class="buy-btn">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-logo">Мираж</div>
+                <p>Кофейня с атмосферой уюта и ароматом свежего кофе</p>
+            </div>
+            <div class="footer-info">
+                <h3>Контакты</h3>
+                <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                <p><i class="fas fa-envelope"></i> info@mirage-coffee.ru</p>
+                <p><i class="fas fa-user"></i> Управляющий: Корнилова Д.Д.</p>
+            </div>
+            <div class="footer-info">
+                <h3>Адрес и время работы</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Улица Кофейная, 22</p>
+                <p><i class="fas fa-clock"></i> Пн-Пт: 8:00 - 23:00</p>
+                <p><i class="fas fa-clock"></i> Сб-Вс: 9:00 - 00:00</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Кофейня "Мираж". Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно контактов -->
+    <div class="contacts-modal" id="contactsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Контакты</h2>
+                <button class="close-modal" id="closeContacts">&times;</button>
+            </div>
+            <div class="contact-info">
+                <div><i class="fas fa-phone"></i> Телефон: +7 (495) 123-45-67</div>
+                <div><i class="fas fa-envelope"></i> Email: info@mirage-coffee.ru</div>
+                <div><i class="fas fa-map-marker-alt"></i> Адрес: Улица Кофейная, 22</div>
+                <div><i class="fas fa-user"></i> Управляющий: Корнилова Д.Д.</div>
+                <div><i class="fas fa-clock"></i> Время работы: Пн-Пт 8:00-23:00, Сб-Вс 9:00-00:00</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно формы -->
+    <div class="form-modal" id="formModal">
+        <div class="form-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Бронирование столика</h2>
+                <button class="close-modal" id="closeForm">&times;</button>
+            </div>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="fullName">ФИО *</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон *</label>
+                    <input type="tel" pattern="\+?[0-9\s\-\(\)]+" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Дата визита *</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Время *</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Количество гостей *</label>
+                    <input type="number" id="guests" name="guests" min="1" max="10" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Дополнительные пожелания</label>
+                    <textarea id="message" name="message" placeholder="Особые пожелания или комментарии..."></textarea>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">Согласен(а) на обработку персональных данных</label>
+                </div>
+                <button type="submit" class="submit-btn">Забронировать</button>
+                <div class="form-message" id="formMessage"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
