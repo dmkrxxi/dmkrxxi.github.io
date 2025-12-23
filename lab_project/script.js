@@ -185,6 +185,32 @@ nextBtn.addEventListener('click', () => {
     });
 });
 
+// Прокрутка отзывов
+const reviewsSlider = document.getElementById('reviewsSlider');
+const prevReviewBtn = document.getElementById('prevReview');
+const nextReviewBtn = document.getElementById('nextReview');
+
+if (prevReviewBtn && nextReviewBtn && reviewsSlider) {
+    prevReviewBtn.addEventListener('click', () => {
+        reviewsSlider.scrollBy({
+            left: -370,
+            behavior: 'smooth'
+        });
+    });
+
+    nextReviewBtn.addEventListener('click', () => {
+        reviewsSlider.scrollBy({
+            left: 370,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Отправка формы с использованием fetch
+const contactForm = document.getElementById('contactForm');
+const formMessage = document.getElementById('formMessage');
+// ... продолжение кода ...
+
 // Отправка формы с использованием fetch
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
@@ -273,4 +299,5 @@ document.addEventListener('keydown', function(e) {
         closeModal(contactsModal);
         closeModal(formModal);
     }
+
 });
